@@ -5,7 +5,7 @@ import FeatureCards from "./sections/FeatureCards";
 import LogoShowcase from "./sections/LogoShowcase";
 import ExperienceSection from "./sections/ExperienceSection";
 import Contact from "./sections/Contact";
-import Footer from "./sections/footer";
+import Footer from "./sections/Footer";
 
 const App = () => {
     return (
