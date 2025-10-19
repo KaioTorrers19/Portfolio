@@ -11,7 +11,7 @@ export const words =[
 export const counterItems = [
     { value: 5, suffix: "+", label: "Anos de Experiência" },
     { value: 5, suffix: "+", label: "Clientes Satisfeitos" },
-    { value: 16, suffix: "+", label: "Projetos Realizados" },
+    { value: 17, suffix: "+", label: "Projetos Realizados" },
     { value: 100, suffix: "%", label: "Taxa de retenção de clientes" },
   ];
 export const navLinks =[{
