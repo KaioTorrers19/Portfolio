@@ -63,20 +63,42 @@ const ShowcaseSection = () => {
                 {/* Right */}
                 <div className="project-list-wrapper overflow-hidden">
                     <div className="project" ref={project2Ref}>
-                        <div className="image-wrapper bg-[#FFE7EB]">
-                        <img src="/images/n8n.png" alt="n8n" />
+                        <div className="image-wrapper bg-[#FFE7EB]  p-0">
+                        <img src="/images/n8n.png" alt="n8n" className="object-fill" />
                         </div>
                         <h2>Fluxos Automatizados com n8n: Otimizando Processos de Marketing</h2>
                     </div>
                     <div className="project" ref={project3Ref}>
-                        <div className="image-wrapper bg-[#FFE7EB]">
-                        <img src="/images/Sommelier.png" alt="Sommelier" />
+                        <div className="image-wrapper bg-[#FFE7EB] p-0">
+                            <img src="/images/Sommelier.png" alt="Sommelier"  className=" object-cover"/> 
                         </div>
                         <h2>Sommelier Digital: Software Interativo para Totem Vertical de Vinhos</h2>
                     </div>
+                    
                 </div>
             </div>
+                        <div className="showcaselayout">
+                {/* Left */}
+                <div className="first-project-wrapper" ref={project1Ref}>
+                      
+                    <div className="image-wrapper p-0">
+                        <a href = "https://zigen-landing-page-bxnt.vercel.app/">
+                        <img src="/images/Zigen_capa.jpg" alt="Zigen " className="object-fill"/>
+                        </a>
+                    </div>
+                    <div className="text-content">
+                        <h2>Landing Page Responsiva – Zigen</h2>
+                        <p className="text-white-50 md:text-xl">
+                            Landing page desenvolvida com Vite e Tailwind, incluindo animações construídas em CSS puro. (Clique na imagem para Visualizar)
+                        </p>
+                    </div>
+                </div>
+                {/* Right */}
+
+            </div>
+            
         </div>
+        
     </section>
   );
 }

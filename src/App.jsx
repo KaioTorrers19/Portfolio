@@ -6,6 +6,10 @@ import LogoShowcase from "./sections/LogoShowcase";
 import ExperienceSection from "./sections/ExperienceSection";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import { inject } from '@vercel/analytics';
+
+inject()
+
 
 const App = () => {
     return (
@@ -18,6 +22,7 @@ const App = () => {
 <ExperienceSection/>
 <Contact/>
 <Footer/>
+
 </>
     );
 };
