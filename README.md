@@ -17,7 +17,7 @@ Meu portfolio  Utilizando boas praticas.
 <br>
 
 <p align="center">
-  <img alt="Portfolio " src="public/images/Capa.jpg" width="100%">
+  <img alt="Portfolio " src="public/images/Capa.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
