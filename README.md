@@ -1,7 +1,7 @@
 <h1 align="center">Portfolio</h1>
 
 <p align="center">
-Portfolio  Utilizando boas praticas.
+Meu portfolio  Utilizando boas praticas.
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@ Portfolio  Utilizando boas praticas.
 <br>
 
 <p align="center">
-  <img alt="Portfolio " src="src/images/Capa.jpeg" width="100%">
+  <img alt="Portfolio " src="public/images/Capa.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
