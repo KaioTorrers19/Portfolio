@@ -142,10 +142,10 @@ section {
     }
 
     .contact-btn {
-      @apply flex;
+      @apply flex shrink-0;
 
       .inner {
-        @apply px-5 py-2 rounded-lg bg-white text-black group-hover:bg-black-50 transition-colors duration-300;
+        @apply px-3 py-1.5 sm:px-5 sm:py-2 rounded-lg bg-white text-black text-xs sm:text-sm md:text-base whitespace-nowrap group-hover:bg-black-50 transition-colors duration-300;
 
         span {
           @apply group-hover:text-white transition-colors duration-300;
@@ -325,6 +325,8 @@ section {
 /* Hero text slider starts */
 .slide {
   display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
   flex-direction: column;
   transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
 }
@@ -332,7 +334,7 @@ section {
 .wrapper {
   display: flex;
   flex-direction: column;
-  animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+  animation: wordSlider 9s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
 }
 
 @keyframes wordSlider {

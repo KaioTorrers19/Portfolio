@@ -124,7 +124,7 @@ const translations = {
     ],
     hero: {
       beforeSlide: "Transformando",
-      words: ["Ideas", "Conceptos", "Código"],
+      words: ["Ideas", "Enfoque", "Código"],
       line2: "en proyectos reales",
       line3: "que entregan resultados",
       subtitle:
