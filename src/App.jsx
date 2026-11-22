@@ -7,6 +7,7 @@ import ExperienceSection from "./sections/ExperienceSection";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import { inject } from '@vercel/analytics';
+import { LanguageProvider } from "./context/LanguageContext";
 
 inject()
 
@@ -14,6 +15,7 @@ inject()
 const App = () => {
     return (
 <>
+<LanguageProvider>
 <NavBar/>
 <Hero/>
 <ShowcaseSection/>
@@ -22,7 +24,7 @@ const App = () => {
 <ExperienceSection/>
 <Contact/>
 <Footer/>
-
+</LanguageProvider>
 </>
     );
 };

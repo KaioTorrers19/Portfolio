@@ -135,3 +135,5 @@ export const abilities = [
       url: "https://www.linkedin.com/in/kaiotorresdearaujo/",
     },
   ];
+
+  

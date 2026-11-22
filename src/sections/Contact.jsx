@@ -3,15 +3,25 @@ import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../components/TitleHeader";
 import ContactExperience from "../components/ContactExperience";
+import { useLanguage } from "../context/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [statusType, setStatusType] = useState(""); // "success" | "error" | ""
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const statusText =
+    statusType === "success"
+      ? t.contact.successMsg
+      : statusType === "error"
+        ? t.contact.errorMsg
+        : "";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,6 +31,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setStatusType("");
 
     try {
       await emailjs.sendForm(
@@ -30,22 +41,20 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
 
-   
       setForm({ name: "", email: "", message: "" });
+      setStatusType("success");
     } catch (error) {
-      console.error("EmailJS Error:", error); 
+      console.error("EmailJS Error:", error);
+      setStatusType("error");
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   };
 
   return (
     <section id="contact" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
-        <TitleHeader
-          title="Entre em contato"
-          sub="💬Tem alguma pergunta ou ideias? Vamos conversar! 🚀"
-        />
+        <TitleHeader title={t.contact.title} sub={t.contact.sub} />
         <div className="grid-12-cols mt-16">
           <div className="xl:col-span-5">
             <div className="flex-center card-border rounded-xl p-10">
@@ -55,49 +64,53 @@ const Contact = () => {
                 className="w-full flex flex-col gap-7"
               >
                 <div>
-                  <label htmlFor="name">Seu nome</label>
+                  <label htmlFor="name">{t.contact.nameLabel}</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="Qual é o seu nome?"
+                    placeholder={t.contact.namePlaceholder}
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email">Seu Email</label>
+                  <label htmlFor="email">{t.contact.emailLabel}</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="Qual é o seu  endereço de email?"
+                    placeholder={t.contact.emailPlaceholder}
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message">Sua mensagem</label>
+                  <label htmlFor="message">{t.contact.messageLabel}</label>
                   <textarea
                     id="message"
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="Como posso te ajudar?"
+                    placeholder={t.contact.messagePlaceholder}
                     rows="5"
                     required
                   />
                 </div>
 
-                <button type="submit">
+                {statusText && (
+                  <p className="text-sm text-white-50">{statusText}</p>
+                )}
+
+                <button type="submit" disabled={loading}>
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">
-                      {loading ? "enviando..." : "Enviar"}
+                      {loading ? t.contact.sending : t.contact.send}
                     </p>
                     <div className="arrow-wrapper">
                       <img src="/images/arrow-down.svg" alt="arrow" />

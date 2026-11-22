@@ -14,4 +14,3 @@ const TitleHeader = ({title, sub}) =>{
 }
 
 export default TitleHeader
-
