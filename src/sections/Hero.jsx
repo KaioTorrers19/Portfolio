@@ -9,6 +9,7 @@ import { useLanguage } from "../context/LanguageContext";
 
 const Hero = () => {
   const { t } = useLanguage();
+  const visibleWords = words.slice(0, t.hero.words.length);
 
   useGSAP(() => {
     gsap.fromTo(
@@ -33,17 +34,17 @@ const Hero = () => {
                 {t.hero.beforeSlide}
                 <span className="slide">
                   <span className="wrapper">
-                    {words.map((word, index) => (
+                    {visibleWords.map((word, index) => (
                       <span
                         key={index}
-                        className="flex items-center md:gap-3 gap-1 pb-2"
+                        className="flex items-center md:gap-3 gap-1"
                       >
                         <img
                           src={word.imgPath}
                           alt="person"
-                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
+                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50 shrink-0"
                         />
-                        <span>{t.hero.words[index] || word.text}</span>
+                        <span>{t.hero.words[index]}</span>
                       </span>
                     ))}
                   </span>

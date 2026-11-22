@@ -123,8 +123,8 @@ const translations = {
       { name: "Experiencia", link: "#experience" },
     ],
     hero: {
-      beforeSlide: "Transformando",
-      words: ["Ideas", "Enfoque", "Código"],
+      beforeSlide: "Haciendo",
+      words: ["Ideas", "concepto", "Código"],
       line2: "en proyectos reales",
       line3: "que entregan resultados",
       subtitle:

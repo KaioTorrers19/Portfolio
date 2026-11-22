@@ -54,7 +54,7 @@ const ShowcaseSection = () => {
 
   return (
     <section id="work" ref={sectionRef} className="app-showcase">
-      <div className="w-full">
+      <div className="w-full space-y-12">
         <div className="showcaselayout">
           {/* Left */}
           <div className="first-project-wrapper" ref={project1Ref}>
@@ -73,8 +73,10 @@ const ShowcaseSection = () => {
               <div className="image-wrapper bg-[#FFE7EB] p-0">
                 <img src="/images/n8n.png" alt="n8n" className="object-fill" />
               </div>
-              <h2>{t.showcase.p2Title}</h2>
-              <p className="text-white-50 md:text-lg mt-2">{t.showcase.p2Desc}</p>
+              <div className="px-2 sm:px-3 mt-5 space-y-3">
+                <h2 className="!mt-0">{t.showcase.p2Title}</h2>
+                <p className="text-white-50 md:text-lg">{t.showcase.p2Desc}</p>
+              </div>
             </div>
 
             <div className="project" ref={project3Ref}>
@@ -85,8 +87,10 @@ const ShowcaseSection = () => {
                   className="object-cover"
                 />
               </div>
-              <h2>{t.showcase.p3Title}</h2>
-              <p className="text-white-50 md:text-lg mt-2">{t.showcase.p3Desc}</p>
+              <div className="px-2 sm:px-3 mt-5 space-y-3">
+                <h2 className="!mt-0">{t.showcase.p3Title}</h2>
+                <p className="text-white-50 md:text-lg">{t.showcase.p3Desc}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -129,10 +133,10 @@ const ShowcaseSection = () => {
                   />
                 </a>
               </div>
-              <h2>{t.showcase.p5Title}</h2>
-              <p className="text-white-50 md:text-lg mt-2">
-                {t.showcase.p5Desc}
-              </p>
+              <div className="px-2 sm:px-3 mt-5 space-y-3">
+                <h2 className="!mt-0">{t.showcase.p5Title}</h2>
+                <p className="text-white-50 md:text-lg">{t.showcase.p5Desc}</p>
+              </div>
             </div>
           </div>
         </div>
