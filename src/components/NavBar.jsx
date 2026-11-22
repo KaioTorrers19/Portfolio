@@ -3,7 +3,7 @@ import { navLinks } from "../constants";
 import { useLanguage } from "../context/LanguageContext";
 
 const NavBar = () => {
-  const { lang, setLang, t } = useLanguage();
+  const { lang, toggleLang, t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const NavBar = () => {
           <div className="flex items-center gap-1 rounded-lg border border-white/15 bg-white/5 p-1 text-xs font-semibold">
             <button
               type="button"
-              onClick={() => setLang("pt")}
+              onClick={() => toggleLang("pt")}
               className={`px-2.5 py-1 rounded-md transition cursor-pointer ${
                 lang === "pt"
                   ? "bg-white text-black"
@@ -52,7 +52,7 @@ const NavBar = () => {
             </button>
             <button
               type="button"
-              onClick={() => setLang("es")}
+              onClick={() => toggleLang("es")}
               className={`px-2.5 py-1 rounded-md transition cursor-pointer ${
                 lang === "es"
                   ? "bg-white text-black"

@@ -147,7 +147,7 @@ const translations = {
       p2Desc:
         "Automatización de flujos de trabajo e integración de APIs con n8n para optimizar tareas y campañas.",
       p3Title:
-        "Sommelier Digital: Software Interactivo para Tótem Vertical de Vinos",
+        "Sommelier Digital: Software Interactivo para Tótem Vertical de Vinhos",
       p3Desc:
         "Aplicación interactiva para tótems verticales con recomendación de vinos e interfaz intuitiva.",
       p4Title: "Landing Page Responsiva – Zigen",
@@ -201,7 +201,7 @@ const translations = {
         },
         {
           review:
-            "Tuve la oportunidad de trabajar como becario en la empresa Beeid, donde perfeccioné mis habilidades en depuración de sistemas, desarrollo y mantenimiento de software y también en soporte técnico a máquinas.",
+            "Tuve la oportunidad de trabajar como becario en la empresa Beeid, donde perfeccioné mis habilidades en depuración de sistemas, desenvolvimento e manutenção de software y também en soporte técnico a máquinas.",
           title: "Becario / Prácticas",
           date: "Marzo 2022 - Sep 2022",
           responsibilities: [
@@ -232,12 +232,168 @@ const translations = {
   },
 };
 
+const FlagLoader = ({ targetLang }) => {
+  if (!targetLang) return null;
+
+  return (
+    <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black transition-opacity duration-300">
+      <div className="flex flex-col items-center gap-5">
+        <div className="relative overflow-hidden rounded-xl shadow-[0_0_40px_rgba(255,255,255,0.15)] border border-white/15 animate-pulse">
+          {targetLang === "es" ? (
+            /* Bandeira da Espanha com escudo mais largo e centralizado na faixa amarela */
+            <svg className="w-28 h-20" viewBox="0 0 750 500">
+              {/* Faixas vermelho e amarelo */}
+              <rect width="750" height="500" fill="#AA151B" />
+              <rect width="750" height="250" y="125" fill="#F1BF00" />
+
+              {/* Escudo largo centralizado no meio da faixa amarela */}
+              <g transform="translate(155, 138) scale(0.92)">
+                {/* Coroa superior larga */}
+                <path
+                  d="M20 20 L90 20 L82 34 L28 34 Z"
+                  fill="#F1BF00"
+                  stroke="#AA151B"
+                  strokeWidth="3.5"
+                />
+                <circle cx="55" cy="13" r="5.5" fill="#AA151B" />
+                <circle cx="32" cy="17" r="4.5" fill="#004C99" />
+                <circle cx="78" cy="17" r="4.5" fill="#004C99" />
+
+                {/* Corpo do escudo largo */}
+                <path
+                  d="M10 36 L100 36 L100 144 Q100 188 55 205 Q10 188 10 144 Z"
+                  fill="#FFFFFF"
+                  stroke="#AA151B"
+                  strokeWidth="4.5"
+                />
+
+                {/* Quadrante 1: Castelo (Castela) */}
+                <rect x="12" y="38" width="43" height="53" fill="#AA151B" />
+                <rect x="21" y="54" width="25" height="29" fill="#F1BF00" />
+                <rect x="18" y="48" width="8" height="10" fill="#F1BF00" />
+                <rect x="41" y="48" width="8" height="10" fill="#F1BF00" />
+                <rect x="29" y="69" width="9" height="14" fill="#AA151B" />
+
+                {/* Quadrante 2: Leão (Leão) */}
+                <rect x="55" y="38" width="43" height="53" fill="#F7F7F7" />
+                <path
+                  d="M66 79 Q76.5 54 87 79 M70 62 L83 62 M76.5 49 L76.5 81"
+                  stroke="#9B1C71"
+                  strokeWidth="5"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+
+                {/* Quadrante 3: Aragão */}
+                <rect x="12" y="91" width="43" height="53" fill="#F1BF00" />
+                <line
+                  x1="19"
+                  y1="91"
+                  x2="19"
+                  y2="144"
+                  stroke="#AA151B"
+                  strokeWidth="4"
+                />
+                <line
+                  x1="28.5"
+                  y1="91"
+                  x2="28.5"
+                  y2="144"
+                  stroke="#AA151B"
+                  strokeWidth="4"
+                />
+                <line
+                  x1="38"
+                  y1="91"
+                  x2="38"
+                  y2="144"
+                  stroke="#AA151B"
+                  strokeWidth="4"
+                />
+                <line
+                  x1="47.5"
+                  y1="91"
+                  x2="47.5"
+                  y2="144"
+                  stroke="#AA151B"
+                  strokeWidth="4"
+                />
+
+                {/* Quadrante 4: Navarra */}
+                <rect x="55" y="91" width="43" height="53" fill="#AA151B" />
+                <path
+                  d="M60 95 L93 140 M93 95 L60 140 M76.5 95 L76.5 140 M60 117.5 L93 117.5"
+                  stroke="#F1BF00"
+                  strokeWidth="3"
+                  fill="none"
+                />
+
+                {/* Base: Granada */}
+                <path
+                  d="M12 144 L98 144 Q90 182 55 202 Q20 182 12 144 Z"
+                  fill="#FFFFFF"
+                />
+                <path
+                  d="M46 168 Q55 153 64 168 Q60 182 55 187 Q50 182 46 168 Z"
+                  fill="#AA151B"
+                />
+                <path
+                  d="M51 155 L55 148 L59 155"
+                  stroke="#1E7F34"
+                  strokeWidth="3.5"
+                  fill="none"
+                />
+
+                {/* Centro: Flores de lis (Borbón) */}
+                <rect
+                  x="41"
+                  y="76"
+                  width="28"
+                  height="33"
+                  fill="#004C99"
+                  stroke="#AA151B"
+                  strokeWidth="3.5"
+                />
+                <circle cx="55" cy="92.5" r="5.5" fill="#AA151B" />
+              </g>
+            </svg>
+          ) : (
+            /* Bandeira do Brasil */
+            <svg className="w-28 h-20" viewBox="0 0 720 504">
+              <rect width="720" height="504" fill="#009B3A" />
+              <polygon points="360,60 660,252 360,444 60,252" fill="#FEDF00" />
+              <circle cx="360" cy="252" r="115" fill="#002776" />
+              <path
+                d="M 248 228 Q 360 195 472 258"
+                stroke="#FFFFFF"
+                strokeWidth="16"
+                fill="none"
+              />
+            </svg>
+          )}
+        </div>
+
+        <div className="w-40 h-1.5 bg-white/15 rounded-full overflow-hidden">
+          <div className="h-full bg-white rounded-full animate-[flagProgress_1.8s_ease-in-out_forwards]" />
+        </div>
+
+        <p className="text-xs tracking-[0.25em] uppercase text-white-50 font-medium">
+          {targetLang === "es"
+            ? "Cargando Español..."
+            : "Carregando Português..."}
+        </p>
+      </div>
+    </div>
+  );
+};
+
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const [lang, setLang] = useState(() => {
     return localStorage.getItem("app_lang") || "pt";
   });
+  const [loadingLang, setLoadingLang] = useState(null);
 
   useEffect(() => {
     localStorage.setItem("app_lang", lang);
@@ -245,17 +401,31 @@ export const LanguageProvider = ({ children }) => {
   }, [lang]);
 
   const toggleLang = (selectedLang) => {
-    if (selectedLang === "pt" || selectedLang === "es") {
-      setLang(selectedLang);
-    } else {
-      setLang((prev) => (prev === "pt" ? "es" : "pt"));
-    }
+    const nextLang =
+      selectedLang === "pt" || selectedLang === "es"
+        ? selectedLang
+        : lang === "pt"
+        ? "es"
+        : "pt";
+
+    if (nextLang === lang || loadingLang) return;
+
+    setLoadingLang(nextLang);
+
+    setTimeout(() => {
+      setLang(nextLang);
+    }, 400);
+
+    setTimeout(() => {
+      setLoadingLang(null);
+    }, 1400);
   };
 
   return (
     <LanguageContext.Provider
       value={{ lang, setLang, toggleLang, t: translations[lang] }}
     >
+      <FlagLoader targetLang={loadingLang} />
       {children}
     </LanguageContext.Provider>
   );
