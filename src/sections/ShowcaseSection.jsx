@@ -74,6 +74,7 @@ const ShowcaseSection = () => {
                 <img src="/images/n8n.png" alt="n8n" className="object-fill" />
               </div>
               <h2>{t.showcase.p2Title}</h2>
+              <p className="text-white-50 md:text-lg mt-2">{t.showcase.p2Desc}</p>
             </div>
 
             <div className="project" ref={project3Ref}>
@@ -85,6 +86,7 @@ const ShowcaseSection = () => {
                 />
               </div>
               <h2>{t.showcase.p3Title}</h2>
+              <p className="text-white-50 md:text-lg mt-2">{t.showcase.p3Desc}</p>
             </div>
           </div>
         </div>

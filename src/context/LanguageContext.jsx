@@ -29,15 +29,19 @@ const translations = {
         "App em React com backend integrado (MySQL + API) e carrinho de compras funcional.",
       p2Title:
         "Fluxos Automatizados com n8n: Otimizando Processos de Marketing",
+      p2Desc:
+        "Automação de fluxos de trabalho e integração de APIs com n8n para otimizar tarefas e campanhas.",
       p3Title:
         "Sommelier Digital: Software Interativo para Totem Vertical de Vinhos",
+      p3Desc:
+        "Aplicação interativa para totens verticais com recomendação de vinhos e interface intuitiva.",
       p4Title: "Landing Page Responsiva – Zigen",
       p4Desc:
         "Landing page desenvolvida com Vite e Tailwind, incluindo animações construídas em CSS puro. (Clique na imagem para Visualizar)",
       p5Title:
-    "Site Institucional Escuela Taller – Ayuntamiento de San Martín del Rey Aurelio",
-  p5Desc:
-    "Site oficial responsivo desenvolvido para o programa Escuela Taller do Ayuntamiento de San Martín del Rey Aurelio (Astúrias, Espanha). (Clique na imagem para Visualizar)",
+        "Site Institucional Escuela Taller – Ayuntamiento de San Martín del Rey Aurelio",
+      p5Desc:
+        "Site oficial responsivo desenvolvido para o programa Escuela Taller do Ayuntamiento de San Martín del Rey Aurelio (Astúrias, Espanha). (Clique na imagem para Visualizar)",
     },
     abilities: [
       {
@@ -140,13 +144,19 @@ const translations = {
         "App en React con backend integrado (MySQL + API) y carrito de compras funcional.",
       p2Title:
         "Flujos Automatizados con n8n: Optimizando Procesos de Marketing",
+      p2Desc:
+        "Automatización de flujos de trabajo e integración de APIs con n8n para optimizar tareas y campañas.",
       p3Title:
         "Sommelier Digital: Software Interactivo para Tótem Vertical de Vinos",
+      p3Desc:
+        "Aplicación interactiva para tótems verticales con recomendación de vinos e interfaz intuitiva.",
       p4Title: "Landing Page Responsiva – Zigen",
+      p4Desc:
+        "Landing page desarrollada con Vite y Tailwind, incluyendo animaciones construidas en CSS puro. (Haz clic en la imagen para ver)",
       p5Title:
-    "Sitio Web Institucional Escuela Taller – Ayuntamiento de San Martín del Rey Aurelio",
-  p5Desc:
-    "Sitio web oficial responsivo desarrollado para la Escuela Taller del Ayuntamiento de San Martín del Rey Aurelio (Asturias, España). (Haz clic en la imagen para ver)",
+        "Sitio Web Institucional Escuela Taller – Ayuntamiento de San Martín del Rey Aurelio",
+      p5Desc:
+        "Sitio web oficial responsivo desarrollado para la Escuela Taller del Ayuntamiento de San Martín del Rey Aurelio (Asturias, España). (Haz clic en la imagen para ver)",
     },
     abilities: [
       {
@@ -169,7 +179,7 @@ const translations = {
       cards: [
         {
           review:
-            "Durante mi etapa en la empresa The Led, participé en la planificación y desarrollo de varios softwares, tanto para uso interno como para clientes. También colaboré en la creación de interfaces y prototipos en Figma, trabajando con el equipo en distintas fases de los proyectos.",
+            "Durante mi etapa en la empresa The Led, participé en la planificación y desarrollo de varios softwares, tanto para uso interno como para clientes. También colaboré en la creación de interfaces y protótipos en Figma, trabajando con el equipo en distintas fases de los proyectos.",
           title: "Developer",
           date: "Abril 2022 - Oct 2024",
           responsibilities: [
