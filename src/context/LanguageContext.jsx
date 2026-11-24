@@ -1,5 +1,15 @@
 import { createContext, useContext, useState, useEffect } from "react";
 
+const WHATSAPP_NUMBER = "34727745449";
+const WHATSAPP_DISPLAY = "+34 727 745 449";
+
+const WA_MSG_PT = encodeURIComponent(
+  "Olá Kaio! Vi seu portfólio e quero testar a IA de turismo no WhatsApp."
+);
+const WA_MSG_ES = encodeURIComponent(
+  "¡Hola Kaio! Vi tu portafolio y quiero probar la IA de turismo en WhatsApp."
+);
+
 const translations = {
   pt: {
     nav: [
@@ -28,9 +38,12 @@ const translations = {
       p1Desc:
         "App em React com backend integrado (MySQL + API) e carrinho de compras funcional.",
       p2Title:
-        "Fluxos Automatizados com n8n: Otimizando Processos de Marketing",
+        "Flujos Automatizados con n8n: Optimizando Processos de Marketing",
       p2Desc:
-        "Automação de fluxos de trabalho e integração de APIs com n8n para otimizar tarefas e campanhas.",
+        "Automação de fluxos de trabalho e integração de APIs com n8n para otimizar tarefas e campanhas — incluindo agente de IA multilíngue no WhatsApp para consulta de pacotes turísticos, reservas, cancelamentos e alertas por e-mail em VPS com Docker e banco de dados.",
+      p2WhatsappUrl: `https://wa.me/${WHATSAPP_NUMBER}?text=${WA_MSG_PT}`,
+      p2WhatsappCta: "Conversar com a IA no WhatsApp",
+     
       p3Title:
         "Sommelier Digital: Software Interativo para Totem Vertical de Vinhos",
       p3Desc:
@@ -145,7 +158,9 @@ const translations = {
       p2Title:
         "Flujos Automatizados con n8n: Optimizando Procesos de Marketing",
       p2Desc:
-        "Automatización de flujos de trabajo e integración de APIs con n8n para optimizar tareas y campañas.",
+        "Automatización de flujos de trabajo e integración de APIs con n8n para optimizar tareas y campañas — incluyendo agente de IA multilingüe en WhatsApp para consulta de paquetes turísticos, reservas, cancelaciones y avisos por correo en VPS con Docker y base de datos.",
+      p2WhatsappUrl: `https://wa.me/${WHATSAPP_NUMBER}?text=${WA_MSG_ES}`,
+      p2WhatsappCta: "Hablar con la IA en WhatsApp",
       p3Title:
         "Sommelier Digital: Software Interactivo para Tótem Vertical de Vinhos",
       p3Desc:
@@ -240,15 +255,10 @@ const FlagLoader = ({ targetLang }) => {
       <div className="flex flex-col items-center gap-5">
         <div className="relative overflow-hidden rounded-xl shadow-[0_0_40px_rgba(255,255,255,0.15)] border border-white/15 animate-pulse">
           {targetLang === "es" ? (
-            /* Bandeira da Espanha com escudo mais largo e centralizado na faixa amarela */
             <svg className="w-28 h-20" viewBox="0 0 750 500">
-              {/* Faixas vermelho e amarelo */}
               <rect width="750" height="500" fill="#AA151B" />
               <rect width="750" height="250" y="125" fill="#F1BF00" />
-
-              {/* Escudo largo centralizado no meio da faixa amarela */}
               <g transform="translate(155, 138) scale(0.92)">
-                {/* Coroa superior larga */}
                 <path
                   d="M20 20 L90 20 L82 34 L28 34 Z"
                   fill="#F1BF00"
@@ -258,23 +268,17 @@ const FlagLoader = ({ targetLang }) => {
                 <circle cx="55" cy="13" r="5.5" fill="#AA151B" />
                 <circle cx="32" cy="17" r="4.5" fill="#004C99" />
                 <circle cx="78" cy="17" r="4.5" fill="#004C99" />
-
-                {/* Corpo do escudo largo */}
                 <path
                   d="M10 36 L100 36 L100 144 Q100 188 55 205 Q10 188 10 144 Z"
                   fill="#FFFFFF"
                   stroke="#AA151B"
                   strokeWidth="4.5"
                 />
-
-                {/* Quadrante 1: Castelo (Castela) */}
                 <rect x="12" y="38" width="43" height="53" fill="#AA151B" />
                 <rect x="21" y="54" width="25" height="29" fill="#F1BF00" />
                 <rect x="18" y="48" width="8" height="10" fill="#F1BF00" />
                 <rect x="41" y="48" width="8" height="10" fill="#F1BF00" />
                 <rect x="29" y="69" width="9" height="14" fill="#AA151B" />
-
-                {/* Quadrante 2: Leão (Leão) */}
                 <rect x="55" y="38" width="43" height="53" fill="#F7F7F7" />
                 <path
                   d="M66 79 Q76.5 54 87 79 M70 62 L83 62 M76.5 49 L76.5 81"
@@ -283,8 +287,6 @@ const FlagLoader = ({ targetLang }) => {
                   fill="none"
                   strokeLinecap="round"
                 />
-
-                {/* Quadrante 3: Aragão */}
                 <rect x="12" y="91" width="43" height="53" fill="#F1BF00" />
                 <line
                   x1="19"
@@ -318,8 +320,6 @@ const FlagLoader = ({ targetLang }) => {
                   stroke="#AA151B"
                   strokeWidth="4"
                 />
-
-                {/* Quadrante 4: Navarra */}
                 <rect x="55" y="91" width="43" height="53" fill="#AA151B" />
                 <path
                   d="M60 95 L93 140 M93 95 L60 140 M76.5 95 L76.5 140 M60 117.5 L93 117.5"
@@ -327,8 +327,6 @@ const FlagLoader = ({ targetLang }) => {
                   strokeWidth="3"
                   fill="none"
                 />
-
-                {/* Base: Granada */}
                 <path
                   d="M12 144 L98 144 Q90 182 55 202 Q20 182 12 144 Z"
                   fill="#FFFFFF"
@@ -343,8 +341,6 @@ const FlagLoader = ({ targetLang }) => {
                   strokeWidth="3.5"
                   fill="none"
                 />
-
-                {/* Centro: Flores de lis (Borbón) */}
                 <rect
                   x="41"
                   y="76"
@@ -358,7 +354,6 @@ const FlagLoader = ({ targetLang }) => {
               </g>
             </svg>
           ) : (
-            /* Bandeira do Brasil */
             <svg className="w-28 h-20" viewBox="0 0 720 504">
               <rect width="720" height="504" fill="#009B3A" />
               <polygon points="360,60 660,252 360,444 60,252" fill="#FEDF00" />

@@ -71,11 +71,34 @@ const ShowcaseSection = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-[#FFE7EB] p-0">
-                <img src="/images/n8n.png" alt="n8n" className="object-fill" />
+                <a
+                  href={t.showcase.p2WhatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/images/Robot.png"
+                    alt="n8n WhatsApp AI"
+                    className="object-fill"
+                  />
+                </a>
               </div>
               <div className="px-2 sm:px-3 mt-5 space-y-3">
                 <h2 className="!mt-0">{t.showcase.p2Title}</h2>
                 <p className="text-white-50 md:text-lg">{t.showcase.p2Desc}</p>
+                <div className="pt-1 flex flex-wrap items-center gap-3">
+                  <a
+                    href={t.showcase.p2WhatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition hover:opacity-90"
+                  >
+                    {t.showcase.p2WhatsappCta}
+                  </a>
+                  <span className="text-xs text-white/70">
+                    {t.showcase.p2WhatsappNumber}
+                  </span>
+                </div>
               </div>
             </div>
 
